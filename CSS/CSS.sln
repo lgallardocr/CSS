@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsCSS", "Less\BasicsCSS
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsLess", "BasicsLess\BasicsLess.csproj", "{4D8735C1-895B-4698-8D65-88C0024294D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsSSAS", "BasicsSSAS\BasicsSSAS.csproj", "{F3E0BE0F-A35F-4483-A0B1-E1D434505D49}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{4D8735C1-895B-4698-8D65-88C0024294D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4D8735C1-895B-4698-8D65-88C0024294D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4D8735C1-895B-4698-8D65-88C0024294D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F3E0BE0F-A35F-4483-A0B1-E1D434505D49}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F3E0BE0F-A35F-4483-A0B1-E1D434505D49}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F3E0BE0F-A35F-4483-A0B1-E1D434505D49}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F3E0BE0F-A35F-4483-A0B1-E1D434505D49}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
