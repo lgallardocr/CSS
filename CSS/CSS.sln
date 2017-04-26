@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 14
 VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsCSS", "Less\BasicsCSS.csproj", "{F7906525-9874-4023-81A0-D570A6A985AF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsCSS", "BasicsCSS\BasicsCSS.csproj", "{F7906525-9874-4023-81A0-D570A6A985AF}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasicsLess", "BasicsLess\BasicsLess.csproj", "{4D8735C1-895B-4698-8D65-88C0024294D5}"
 EndProject
