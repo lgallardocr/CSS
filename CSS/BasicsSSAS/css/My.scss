@@ -1,5 +1,15 @@
 @import "css/init.css";
 
+$main-color: black;
+$baseFontSize: 14px;
+$baseClassName: "col";
+
+.#{$baseClassName}1 {
+    font-size: $baseFontSize;
+}
+.#{$baseClassName}2 {
+    font-size: $baseFontSize + 2px;
+}
 /* Basics */
 html
 {
@@ -8,19 +18,19 @@ html
 }
 body
 {
-  background: #000;
+  background: lighten($main-color, 50%);
 }
 h1
 {
-  font-size: 24px;
+  font-size: $baseFontSize + 10px;
 }
 h2
 {
-  font-size: 18px;
+  font-size: $baseFontSize + 6px;
 }
 h3
 {
-  font-size: 16px;
+  font-size: $baseFontSize + 2px;
 }
 
 /* Layout */
@@ -35,7 +45,7 @@ h3
   border-radius: 5px;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
-  color: #000;
+  color: $main-color;
 }
 
 /* Sections */
