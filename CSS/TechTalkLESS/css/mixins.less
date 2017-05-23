@@ -1,0 +1,45 @@
+﻿.rounded-corners(@size: 5px) {
+    border-radius: @size;
+    -moz-border-radius: @size;
+    -webkit-border-radius: @size;
+}
+
+.set-color(@main-color, @text-color) {
+    background: @main-color;
+    color: @text-color;
+}
+
+.generate-paddings(@n, @i: 1) when (@i =< @n) {
+  .padding-column-@{i} {
+    padding: (@i * 3px);
+  }
+  .generate-paddings(@n, (@i + 1));
+}
+
+
+.condition(@isContainer:true){
+  & when (@isContainer = true){
+    header {
+      background-color: yellow;
+      #title {
+          background-color: orange;
+      }
+    }
+
+    article {
+      background-color: red;
+    }
+  }
+  & when (@isContainer = false){
+    header {
+      background-color: black;
+      #title {
+          background-color: white;
+      }
+    }
+
+    article {
+      background-color: orange;
+    }
+  }
+}
