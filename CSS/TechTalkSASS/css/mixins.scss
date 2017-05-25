@@ -1,0 +1,47 @@
+﻿@mixin rounded-corners($size: 5px) {
+    border-radius: $size;
+    -moz-border-radius: $size;
+    -webkit-border-radius: $size;
+}
+
+@mixin set-color($main-color, $text-color) {
+    background: $main-color;
+    color: $text-color;
+}
+ 
+@mixin generate-paddings($n) {
+
+    @for $i from 1 through $n {
+        .padding-column-#{$i} {
+            padding: ($i * 3px);
+        }
+    }
+}
+
+
+@mixin condition($isContainer:true){
+
+    @if $isContainer == true {
+        header {
+          background-color: yellow;
+          #title {
+              background-color: orange;
+          }
+        }
+
+        article {
+          background-color: red;
+        }
+    } @else {
+          header {
+              background-color: black;
+              #title {
+                  background-color: white;
+              }
+            }
+
+            article {
+              background-color: orange;
+            }
+      }
+}

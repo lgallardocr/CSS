@@ -9,23 +9,23 @@
 html
 {
   font-family: 'Open Sans', verdana, helvetica, sans-serif;
-  font-size: @base-size;
+  font-size: $base-size;
 }
 body
 {
-  background: @main-color;
+  background: $main-color;
 }
 h1
 {
-  font-size: @base-size + 10px;
+  font-size: $base-size + 10px;
 }
 h2
 {
-  font-size: @base-size + 4px;
+  font-size: $base-size + 4px;
 }
 h3
 {
-  font-size: @base-size + 2px;
+  font-size: $base-size + 2px;
 }
 
 /* Layout */
@@ -37,24 +37,22 @@ h3
   margin-right: auto;
   background: #FFF;
   padding: 5px;
-  .rounded-corners;
-  color: darken(@main-color, 30%);
+  @include rounded-corners;
+  color: darken($main-color, 30%);
 }
 
-@app-root: "http://localhost:8000/";
+$app-root: "http://localhost:8000/";
 
 /* Namespacing */
-#contact-module {
-    .fonts() {
-        font-family: "Open Sans", Verdana, Helvetica, sans-serif;
-        font-size: @base-size;
-    }
+@mixin fonts() {
+    font-family: "Open Sans", Verdana, Helvetica, sans-serif;
+    font-size: $base-size;
 }
 
 /* Forms */
 .form {
-    background-image: url("@{app-root}images/background.jpg");
-    @base-size: 24px;
+    background-image: url("#{$app-root}images/background.jpg");
+    $base-size: 24px;
     background: #f8f8f8;
     margin-left: auto;
     margin-right: auto;
@@ -71,18 +69,18 @@ h3
 /*Nested rules*/
 .form-container
 {    
-    &:extend(.form);
+    @extend form;
     width: 400px;
-    .rounded-corners(12px);
+    @include rounded-corners(12px);
 
     input[type=textbox], textarea
     {
-        #contact-module > .fonts();
+        @include fonts();
         background: #ffffe0;
         width: 250px;
         display: block;
         border: 1px #000 solid;
-        .rounded-corners(3px);
+        @include rounded-corners(3px);
         padding: 2px;
     }
     textarea
@@ -95,10 +93,10 @@ h3
 
 .subscribe-container
 {
-    &:extend(.form);
+    @extend form;
     width: 400px;
-    .rounded-corners(12px);
-    .set-color(#ff6a00, brown);
+    @include rounded-corners(12px);
+    @include set-color(#ff6a00, brown);
     margin-top:20px;
 
     input[type=submit]
@@ -109,20 +107,20 @@ h3
 
 
 /*String Interpolation*/
-@root: "/images/";
+$root: "/images/";
 
 .interpolation {
-    background: url("@{root}background.jpg")
+    background: url("#{$root}background.jpg")
 }
 
 /*Looping*/
-.generate-paddings(6);
+@include generate-paddings(6);
 
  
 /*Condition TRUE*/
-.condition(true);
+@include condition(true);
 
 /*Condition FALSE*/ 
-.condition(false);
+@include  condition(false);
 
 
